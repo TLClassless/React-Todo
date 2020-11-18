@@ -5,8 +5,12 @@ import logo from "../../react.svg";
 function Header() {
   return (
     <header style={headerStyle}>
-      <img style={logoStyle} src={logo} alt="React Logo" />
-      <h1>React To Do List:</h1>
+      <Link to="/">
+        <img style={logoStyle} src={logo} alt="React Logo" />
+      </Link>
+      <Link to="/">
+        <h1 style={titleStyle}>React To Do List:</h1>
+      </Link>
       <span style={headerContainer}>
         <Link style={linkStyle} to="/">
           <p>Home </p>
@@ -19,6 +23,12 @@ function Header() {
     </header>
   );
 }
+
+const titleStyle = {
+  fontSize: "30pt",
+  color: "#fff",
+  fontWeight: "700",
+};
 
 const headerStyle = {
   background: "#333",
